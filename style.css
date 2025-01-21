@@ -161,3 +161,28 @@ ul {
     background-color: var(--color-button-hover);
 }
 
+.button-reset {
+    padding: 15px 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: var(--color-text);
+    background-color: var(--color-tertiary);
+    border: 2px solid #000;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-reset:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.ganador {
+    color: #05DF05;
+    border-radius: 10px;
+    transition: background-color 0.5s ease, transform 0.3s ease;
+    transform: scale(2);
+}
+

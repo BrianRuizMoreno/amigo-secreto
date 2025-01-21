@@ -1,4 +1,3 @@
-
 let nombres = [];
 
 function agregarAmigo() {
@@ -27,11 +26,18 @@ function sortearAmigo() {
         alert("No hay amigos para sortear");
         return;
     }
-    const indiceAleatorio = Math.floor(Math.random() * nombres.length);
+    const listaItems = document.querySelectorAll("#listaAmigos li"); // Limpiar cualquier estilo previo
+    listaItems.forEach(item => item.classList.remove("ganador"));
+
+    const indiceAleatorio = Math.floor(Math.random() * nombres.length); // Seleccionar ganador
     const amigoSorteado = nombres[indiceAleatorio];
-    const resultado = document.querySelector("#resultado");
-    resultado.innerHTML = `<li>El amigo secreto es: ${amigoSorteado}</li>`; // Mostrar el resultado
+
+    listaItems[indiceAleatorio].classList.add("ganador"); // Añadir clase para resaltar al ganador
+
+    const resultado = document.querySelector("#resultado"); // Mostrar el nombre del ganador
+    resultado.innerHTML = `<li>El amigo secreto es: ${amigoSorteado}</li>`;
 }
+
 
 function resetearLista() {
     nombres = [];
