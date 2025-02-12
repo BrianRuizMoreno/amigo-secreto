@@ -15,6 +15,12 @@
     box-sizing: border-box;
 }
 
+/* Estidos para los popup */
+.swal2-popup {
+    font-family: 'Poppins', sans-serif !important;
+    border-radius: 10px;
+}
+
 body {
     height: 100vh;
     background-color: var(--color-primary);
@@ -50,20 +56,21 @@ body {
     align-items: center;
     padding: 20px;
     width: 100%;
+    margin-bottom: 10%;
 }
 
 /* Títulos */
 .main-title {
-    font-size: 4vw; /* Fluid typography */
-    font-family: "Merriweather", serif;
+    font-size: 48px;
+    font-family: "Noto Sans", serif;
     font-weight: 900;
     font-style: italic;
-    color: var(--color-white);
+    color: var(--color-white);    
 }
 
 .section-title {
-    font-family: "Inter", serif;
-    font-size: 3vw; /* Fluid typography */
+    font-family: "Poppins", serif;
+    font-size: 36px;
     font-weight: 700;
     color: var(--color-primary);
     margin: 10px 0;
@@ -84,36 +91,40 @@ body {
     padding: 10px;
     border: 2px solid #000;
     border-radius: 25px 0 0 25px;
-    font-size: 1rem; /* Relative unit */
+    font-size: 16px;
+    text-transform: capitalize;
+    font-family: "Poppins", serif;
 }
 
 .button-container {
-    width: 300px;
-    justify-content: center;
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;      
+    gap: 40px;   
 }
 
 /* Estilos de entrada de texto */
 .input-title {
     flex: 1;
     padding: 10px 15px;
-    font-size: 1rem; /* Relative unit */
+    font-size: 16px;
     border: 2px solid #333;
     border-right: none;
     border-radius: 25px 0 0 25px;
-    font-family: "Merriweather", serif;
+    font-family: "Poppins", serif;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilos de botón */
 button {
     padding: 15px 30px;
-    font-family: "Inter", sans-serif;
-    font-size: 1rem; /* Relative unit */
+    font-family: "Poppins", serif;
+    font-size: 16px;
     border: 2px solid #000;
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Added transition */
 }
 
 .button-add {
@@ -126,155 +137,126 @@ button {
     background-color: #a1a1a1;
 }
 
+.button-autor {
+    display: flex;
+    align-items: left;
+    width: 20%;
+    margin-left: 5%;
+    color: var(--color-tertiary);
+    background-color: var(--color-text);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-autor:hover {
+    background-color: #a1a1a1;
+}
+
 /* Listas */
 ul {
     list-style-type: none;
     color: var(--color-text);
-    font-family: "Inter", sans-serif;
-    font-size: 1.125rem; /* Relative unit */
+    font-family: "Poppins", serif;
+    font-size: 18px;
     margin: 20px 0;
+    text-decoration: dotted;
 }
 
 .result-list {
-    margin-top: 15px;
+    margin-top: 2px;
     color: #05DF05;
-    font-size: 1.375rem; /* Relative unit */
+    font-size: 25px;
     font-weight: bold;
     text-align: center;
 }
 
 /* Botón de sortear título */
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 10%;
-    width: 35%;
-}
-
 .button-draw {
     display: flex;
     align-items: center;
-    width: 100%;
-    padding: 10px 40px;
+    width: 70%;    
+    padding: 0;
     color: var(--color-white);
     background-color: var(--color-button);
-    font-size: 1rem; /* Relative unit */
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    justify-content: center;    
 }
 
 .button-draw img {
-    margin-right: 40px;
+    margin-right: 20px;    
 }
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
 
-.button-reset {
-    padding: 15px 30px;
-    font-family: "Inter", sans-serif;
-    font-size: 1rem; /* Relative unit */
-    color: var(--color-text);
-    background-color: var(--color-tertiary);
-    border: 2px solid #000;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+/* Boton reset */
+
+.button-reset{    
+    display: flex;
+    align-items: center;
+    width: 70%;
+    gap: 20px;    
+    color: var(--color-white);
+    background-color: var(--color-button);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-reset img {
+    width: 40px;
+    height: 40px;    
 }
 
 .button-reset:hover {
-    background-color: var(--color-primary);
-    color: var(--color-white);
+    background-color: var(--color-button-hover);
 }
 
-.ganador {
-    color: #05DF05;
-    border-radius: 10px;
-    transition: background-color 0.5s ease, transform 0.3s ease;
-    transform: scale(2);
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
-@media screen and (min-width: 778px) {
-    .main-title {
-        font-size: 48px;
-    }
-
-    .section-title {
-        font-size: 36px;
-    }
-
-    .input-name {
-        font-size: 16px;
-    }
-
-    .input-title {
-        font-size: 16px;
-    }
-
-    .button-draw {
-        padding: 15px 30px;
-        font-size: 16px;
-    }
-
-    .button-reset {
-        padding: 15px 30px;
-        font-size: 16px;
-    }
+.main-content {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
 }
 
-@media screen and (max-width: 768px) {
-    .main-title {
-        font-size: 36px;
-    }
+/* Responsive */
 
-    .section-title {
-        font-size: 24px;
+@media (max-width: 768px){
+    .header-banner{        
+        flex-direction: column;
     }
-
-    .input-name {
-        font-size: 14px;
+    .input-section{
+        margin-bottom: 20%;
     }
-
-    .input-title {
-        font-size: 14px;
+    .button-container{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
     }
-
-    .button-draw {
-        padding: 10px 20px;
-        font-size: 14px;
+    .button-draw{
+        height: 70px;
+        width: 100%;        
+        justify-content: center;        
     }
-
-    .button-reset {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
+    .button-reset{
+        width: 100%;
+    }    
 }
-
-@media screen and (max-width: 480px) {  
-    .main-title {
-        font-size: 24px;
-    }
-
-    .section-title {
-        font-size: 18px;
-    }
-
-    .input-name {
-        font-size: 12px;
-    }
-
-    .input-title {
-        font-size: 12px;
-    }
-
-    .button-draw {
-        padding: 10px 15px;
-        font-size: 12px;
-    }
-
-    .button-reset {
-        padding: 10px 15px;
-        font-size: 12px;
-    }
-}
-    

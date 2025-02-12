@@ -68,7 +68,6 @@ Este es un proyecto de **código abierto**. Si deseas contribuir con sugerencias
 
 ## Información Adicional
 
-### Imágenes sugeridas
 ![Vista de la interfaz inicial](./assets/captura-inicial.png)
 - Captura inicial mostrando el campo de texto y los botones "Adicionar" y "Sortear Amigo".
 ![Vista de la lista de nombres](./assets/lista-nombres.png)
