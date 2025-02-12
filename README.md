@@ -8,7 +8,8 @@
 
 - **Agregar nombres**: Los usuarios pueden ingresar nombres mediante un campo de texto y un botón "Adicionar".
 - **Lista visible**: Los nombres ingresados se muestran en una lista en pantalla.
-- **Evitar campos vacíos**: No se permite agregar nombres vacíos, pero sí nombres repetidos.
+- **Evitar campos vacíos**: No se permite agregar nombres vacíos.
+- **Evitar nombres repetidos: No se permite agregar dos nombres iguales.
 - **Sorteo aleatorio**: Un botón "Sortear Amigo" selecciona y destaca un nombre al azar.
 - **Reiniciar juego**: Un botón "Reiniciar" permite limpiar la lista y comenzar nuevamente.
 - **Responsive**: Funciona perfectamente en cualquier dispositivo con navegador.
@@ -47,7 +48,7 @@ No requiere dependencias ni entornos adicionales. Simplemente ábrelo en tu nave
    - Haz clic en el botón "Reiniciar" para limpiar la lista y comenzar desde cero.
 
 5. **Volver a sortear**:
-   - Si no deseas reiniciar, simplemente haz clic en "Sortear Amigo" nuevamente para elegir otro ganador de la lista actual o añade nuevos nombres para volver a sortear.
+   - Luego de cada sorteo, la lista de nombres se elimina, dejando en pantalla el ganador anterior, el cual se eliminará cuando se genere uno nuevo.
 
 ---
 
@@ -78,10 +79,6 @@ Este es un proyecto de **código abierto**. Si deseas contribuir con sugerencias
 ![Vista del estado inicial tras resetear y error en campo vacío](./assets/reset.gif)
 - Una vista del estado inicial tras presionar "Reiniciar" y mensaje de error al querer sortear sin nombres.
 
-### Futuras mejoras
-
-- Agregar animaciones para el sorteo.
-- Incorporar una funcionalidad para guardar los nombres ingresados en almacenamiento local.
 
 ¡Gracias por usar **Amigo Secreto**! 🎉
 
