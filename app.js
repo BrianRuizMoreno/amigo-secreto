@@ -102,6 +102,7 @@ function resetearLista() {
         });
         intento = 0;
     }
+    document.querySelector("#amigo").value = "";
 }
 
 function mostrarAutor() {
